@@ -1,11 +1,13 @@
 <p>radar-chart works!</p>
 <div class="grafico">
-    <canvas baseChart 
+    <canvas class="colores" baseChart 
     [datasets]="barChartData"
     [labels]="barChartLabels"
     [options]="barChartOptions"
+    attr.colors="{{chartColors}}"
     [plugins]="barChartPlugins"
     [legend]="barChartLegend"
-    [type]="'radar'">
+    [type]="'radar'"
+    >
   </canvas>
 </div>

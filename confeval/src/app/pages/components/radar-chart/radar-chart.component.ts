@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChartOptions, ChartType } from 'chart.js';
+import { ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-radar-chart',
@@ -26,6 +26,17 @@ export class RadarChartComponent implements OnInit {
   public barChartType: string = 'bar';
   public barChartLegend = true;
   public barChartPlugins = [];
+
+  public chartColors: any[] = [
+    {
+      fillColor:'rgba(0,0,0,0.2)',
+      strokeColor:'rgba(0,0,0,1)',
+      pointColor:'rgba(0,0,0,1)',
+      pointStrokeColor:'#fff',
+      pointHighlightFill:'#fff',
+      pointHighlightStroke:'rgba(200,100,10,0.8)',
+      
+    }];
 
   public barChartData: any = [
     { data: [1, 4, 3], label: 'Series A' },
