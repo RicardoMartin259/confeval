@@ -1,0 +1,133 @@
+<div class="container">
+    <form [formGroup]="proveedorForm" (ngSubmit)="onSubmit()">
+
+        <div>
+            <h1>CALIFICACIÓN DE RIESGO DE LA/FT DEL PROVEEDOR</h1>
+        </div>
+
+        <div class="col">
+            <div class="row mt-1">
+                <div class="col border rounded me-1">
+                    <div class="row">
+                        <span for="">Datos del Proveedor</span>
+                        <mat-form-field class="col" appearance="standard">
+                            <mat-label>Tipo de Documento</mat-label>
+                            <mat-select formControlName="tipoDoc">
+                                <mat-option value="1">DNI</mat-option>
+                                <mat-option value="6">RUC</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="col" appearance="standard">
+                            <mat-label>Número de documento</mat-label>
+                            <input matInput formControlName="numDoc" (blur)="buscarPersona()">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col border rounded">
+                    <div class="row">
+                        <span for="">Datos del Vinculado</span>
+                        <mat-form-field class="col" appearance="standard">
+                            <mat-label>Tipo de Documento</mat-label>
+                            <mat-select formControlName="tipoDoc">
+                                <mat-option value="1">DNI</mat-option>
+                                <mat-option value="6">RUC</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="col" appearance="standard">
+                            <mat-label>Número de documento</mat-label>
+                            <input matInput formControlName="numDoc" (blur)="buscarPersona()">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col border rounded">
+                    <div class="row">
+                        <span for="">Datos del Proveedor</span>
+                        <div class="col">
+                            <mat-form-field class="row" appearance="standard">
+                                <mat-label>Tipo de Documento</mat-label>
+                                <mat-select formControlName="tipoDoc">
+                                    <mat-option value="1">DNI</mat-option>
+                                    <mat-option value="6">RUC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="row" appearance="standard">
+                                <mat-label>Tipo de Documento</mat-label>
+                                <mat-select formControlName="tipoDoc">
+                                    <mat-option value="1">DNI</mat-option>
+                                    <mat-option value="6">RUC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="row" appearance="standard">
+                                <mat-label>Tipo de Documento</mat-label>
+                                <mat-select formControlName="tipoDoc">
+                                    <mat-option value="1">DNI</mat-option>
+                                    <mat-option value="6">RUC</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field class="row" appearance="standard">
+                                <mat-label>Número de documento</mat-label>
+                                <input matInput formControlName="numDoc" (blur)="buscarPersona()">
+                            </mat-form-field>
+                        </div>
+                        
+                        <mat-form-field class="col" appearance="standard">
+                            <mat-label>Número de documento</mat-label>
+                            <input matInput formControlName="numDoc" (blur)="buscarPersona()">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
+        </div>
+
+      <div class="col">
+        <div class="row">
+          <mat-form-field class="col-4" appearance="standard">
+            <mat-label>Tipo de Documento</mat-label>
+            <mat-select formControlName="tipoDoc">
+              <mat-option value="1">DNI</mat-option>
+              <mat-option value="6">RUC</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="col" appearance="standard">
+            <mat-label>Número de documento</mat-label>
+            <input matInput formControlName="numDoc" (blur)="buscarPersona()">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="standard">
+            <mat-label>Razón Social</mat-label>
+            <textarea matInput formControlName="rznSocial"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="standard">
+            <mat-label>Dirección</mat-label>
+            <textarea matInput formControlName="direccion"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+        <div class="row">
+            <mat-form-field class="col" appearance="standard">
+            <mat-label>Contacto</mat-label>
+            <input matInput formControlName="contact">
+            </mat-form-field>
+            <mat-form-field class="col-5" appearance="standard">
+            <mat-label>Número de contacto</mat-label>
+            <input matInput formControlName="contactPhone">
+            </mat-form-field>
+        </div>
+
+        <div class="buttonSubmit">
+            <button type="submit" class="border" mat-raised-button color="primary" [disabled]="">Guardar</button>
+            <a class="border" mat-raised-button color="warn" (click)="cerrarForm()">Cancelar</a>
+        </div>
+
+    </form>
+</div>
